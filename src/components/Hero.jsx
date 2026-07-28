@@ -14,9 +14,7 @@ const Hero = () => {
           <p className="hero-sub">
             I build the pipelines behind the scenes and I'm working my way toward
             building the product in front of them. Currently engineering data
-            systems at Sunoco, running an art studio on the side, and shaping a
-            visual discovery app in the spirit of the platform I most want to
-            build for.
+            systems at Sunoco.
           </p>
           <div className="hero-ctas">
             <a href="#work" className="btn btn-primary">See the work</a>
