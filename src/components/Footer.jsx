@@ -6,7 +6,6 @@ const Footer = () => {
     <footer>
       <div className="wrap">
         <h3 className="footer-headline">
-          Let's build the <em>visual web</em>, together.
         </h3>
         <div className="footer-links">
           <a href="https://github.com/diyatj" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
