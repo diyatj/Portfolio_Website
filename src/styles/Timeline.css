@@ -1,0 +1,67 @@
+#timeline{ overflow: hidden; }
+
+.tl-scroll{
+  position: relative;
+  overflow-x: auto;
+  padding: 30px 4px 20px;
+  margin: 0 -4px;
+}
+
+.tl-track{
+  position: relative;
+  display:flex;
+  min-width: max-content;
+  padding: 0 20px;
+}
+
+.tl-line{
+  position:absolute;
+  top: 46px;
+  left: 0;
+  right:0;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 14px);
+}
+
+.tl-node{
+  width: 210px;
+  padding-right: 34px;
+  position: relative;
+}
+
+.tl-year{
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.tl-dot{
+  width: 13px; height:13px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid var(--red);
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 2;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.tl-node:hover .tl-dot{
+  background: var(--red);
+  transform: scale(1.25);
+}
+
+.tl-label{
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0 0 6px;
+}
+
+.tl-desc{
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  padding-right: 10px;
+}

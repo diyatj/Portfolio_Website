@@ -1,0 +1,102 @@
+#work{ background: var(--paper-dim); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.pin-columns{
+  column-count: 3;
+  column-gap: 22px;
+}
+
+@media (max-width: 900px){ .pin-columns{ column-count: 2; } }
+@media (max-width: 620px){ .pin-columns{ column-count: 1; } }
+
+.pin-card{
+  break-inside: avoid;
+  margin-bottom: 22px;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  padding: 26px 24px;
+  cursor: pointer;
+  position: relative;
+  overflow:hidden;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.pin-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(36,16,22,0.10);
+  border-color: transparent;
+}
+
+.pin-card::before{
+  content:'';
+  position:absolute; top:0; left:0; right:0; height: 5px;
+  background: linear-gradient(90deg, var(--red), var(--coral));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+.pin-card:hover::before{ transform: scaleX(1); }
+
+.pin-tag{
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+  display:block;
+}
+
+.pin-role{
+  font-family: var(--display);
+  font-size: 1.28rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.pin-org{
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+
+.pin-dates{
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+
+.pin-blurb{
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+
+.pin-tags{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip{
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--paper-dim);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+
+.pin-expand{
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--red);
+  margin-top: 16px;
+  display:flex;
+  align-items:center;
+  gap: 6px;
+}

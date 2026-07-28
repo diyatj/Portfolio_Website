@@ -1,0 +1,82 @@
+/* ============================================================
+   EDIT ME — quick reference for things to personalize
+   1. Your last name / title -> src/components/Hero.jsx
+   2. Social links -> search "EDIT-LINK" across src/
+   3. Experience card copy & dates -> src/data/experience.js
+   4. Timeline years -> src/data/timeline.js
+   All placeholder years are marked with a trailing "±" — adjust to your real dates.
+   ============================================================ */
+
+:root{
+  --paper: #FFF6F2;
+  --paper-dim: #FBEAE3;
+  --ink: #241016;
+  --ink-soft: #5c4650;
+  --red: #E60023;
+  --red-deep: #B4001B;
+  --coral: #FF7A59;
+  --line: #EBD3CB;
+
+  --gem-rose: #D9534A;
+  --gem-coral: #C43A2E;
+  --gem-red: #A3001F;
+  --gem-deep: #5C0012;
+
+  --display: 'Fraunces', serif;
+  --body: 'Inter', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+}
+
+*{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin:0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a{ color: inherit; }
+
+::selection{ background: var(--red); color: var(--paper); }
+
+.wrap{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section{ padding: 70px 0; }
+
+.section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+h2.section-title{
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.section-note{
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  max-width: 34ch;
+  text-align: right;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
